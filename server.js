@@ -5,7 +5,7 @@ const app=express();
 const cors=require('cors');
 app.use(
   cors({
-    origin: "https://task-app-assignment-frontend.vercel.app/",
+    origin: "https://task-app-assignment-frontend.vercel.app",
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization", "id"],
   })
