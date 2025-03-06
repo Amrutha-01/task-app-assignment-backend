@@ -5,7 +5,7 @@ const app=express();
 const cors=require('cors');
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://task-app-assignment-backend.onrender.com/",
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization", "id"],
   })
