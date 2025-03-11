@@ -4,18 +4,20 @@ const connectDB=require('./db');
 const app=express();
 const cors=require('cors');
 app.use(
-  cors({
-    origin: "https://task-app-assignment-frontend.vercel.app",
+  cors(
+    {
+    origin: "*",
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization", "id"],
-  })
+  }
+)
 );
 
 const userAPI=require('./routes/user-routes');
 const taskAPI=require('./routes/task-routes');
 const statsAPI=require('./routes/stats-routes');
 
-const port=8000;
+const port=5000;
 
 app.use(express.json());
 app.use("/api/auth/",userAPI);
